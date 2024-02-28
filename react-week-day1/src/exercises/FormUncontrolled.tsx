@@ -8,6 +8,7 @@ export default function FormUncontrolled({ title }: BaseProps) {
 
   const onSubmitUser = (newUser: User) => {
     setSubmittedUser(newUser);
+    console.log(submittedUser);
   };
 
   return (

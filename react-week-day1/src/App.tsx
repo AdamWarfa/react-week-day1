@@ -3,6 +3,11 @@ import "./App.css";
 import Propsdemo from "./exercises/PropsDemo";
 import ListDemo from "./exercises/ListDemo";
 import EventDemo from "./exercises/EventDemo";
+import FormUncontrolled from "./exercises/FormUncontrolled";
+import StateDemo1 from "./exercises/StateDemo1";
+import StateDemo2 from "./exercises/StateDemo2";
+import StateDemo3 from "./exercises/StateDemo3";
+import UseEffect from "./exercises/UseEffect";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -23,9 +28,14 @@ export default function App() {
           </div>
           <div className="exercise-style">
             {selectedView == "info" ? <p>All exercises for React day-1</p> : null}
-            {selectedView == "props1" ? <Propsdemo title="Props demo1" /> : null}
+            {selectedView == "props1" ? <Propsdemo title="Props demo 1" /> : null}
             {selectedView == "list" ? <ListDemo title="List Demo" /> : null}
             {selectedView == "event" ? <EventDemo title="Event Demo" /> : null}
+            {selectedView == "forms" ? <FormUncontrolled title="Forms Demo" /> : null}
+            {selectedView == "state1" ? <StateDemo1 title="State Demo 1" /> : null}
+            {selectedView == "state2" ? <StateDemo2 title="State Demo 2" /> : null}
+            {selectedView == "state3" ? <StateDemo3 title="State Demo 3" /> : null}
+            {selectedView == "effect" ? <UseEffect title="Effect Demo" /> : null}
           </div>
         </div>
       </div>
@@ -51,6 +61,21 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("event")}>
         Event Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("forms")}>
+        Forms Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state1")}>
+        State Demo 1
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state2")}>
+        State Demo 2
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state3")}>
+        State Demo 3
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("effect")}>
+        Effect Demo
       </button>
     </>
   );

@@ -10,7 +10,15 @@ export default function UserForm({ title, onSubmitUser }: UserFormProps) {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     //Read form inputs and submit the form to the parent
+
+    const form = e.currentTarget;
+    const newUser: User = {
+      name: form.name.value,
+      email: form.email.value,
+      isActive: form.isActive.checked,
+    };
     //onSubmitUser(newUser);
+    onSubmitUser(newUser);
   };
 
   return (

@@ -10,6 +10,7 @@ import StateDemo3 from "./exercises/StateDemo3";
 import UseEffect from "./exercises/UseEffect";
 import FetchDemo from "./exercises/FetchDemo";
 import LiftingState from "./exercises/LiftingState";
+import ContextDemoApp from "./exercises/ContextDemo";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -40,6 +41,7 @@ export default function App() {
             {selectedView == "effect" ? <UseEffect title="Effect Demo" /> : null}
             {selectedView == "fetch" ? <FetchDemo title="Fetch Demo" /> : null}
             {selectedView == "liftingState" ? <LiftingState title="Lifting State" /> : null}
+            {selectedView == "contextDemo" ? <ContextDemoApp title="Context Demo App" /> : null}
           </div>
         </div>
       </div>
@@ -86,6 +88,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("liftingState")}>
         Lifting State Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("contextDemo")}>
+        Context Demo
       </button>
     </>
   );
